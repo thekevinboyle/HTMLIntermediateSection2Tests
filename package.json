@@ -1,0 +1,17 @@
+{
+  "name": "acatests",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "find ./ -name '*Test.js' | xargs mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mistakevin/acatests.git"
+  },
+  "author": "Kevin Colten",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mistakevin/acatests/issues"
+  },
+  "homepage": "https://github.com/mistakevin/acatests#readme"
+}

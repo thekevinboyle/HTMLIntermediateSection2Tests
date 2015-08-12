@@ -10,5 +10,5 @@
 2. Run `mocha` in your terminal.
 3. Edit lesson script (eg. _LessonOne.js_) to make the tests pass!
 
-### To run all the tests at once
+### Run all tests
 1. Simply run `npm test`

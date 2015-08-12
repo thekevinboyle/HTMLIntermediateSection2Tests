@@ -1,4 +1,4 @@
-function LessonOne() {
+module.exports = function() {
 
   this.returnTrue = function () {
     // should return true
@@ -28,5 +28,3 @@ function LessonOne() {
 
   }
 }
-
-module.exports = LessonOne;

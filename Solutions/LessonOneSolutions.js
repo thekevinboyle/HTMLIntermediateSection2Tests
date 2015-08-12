@@ -1,4 +1,4 @@
-function LessonOne() {
+module.exports = function () {
 
   this.returnTrue = function () {
     return true;
@@ -20,5 +20,3 @@ function LessonOne() {
     return a === b
   }
 }
-
-module.exports = LessonOne;

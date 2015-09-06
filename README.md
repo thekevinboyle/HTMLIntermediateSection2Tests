@@ -14,6 +14,7 @@
 #### Run all tests
 1. Simply run `npm test`
 
+### Longstart
 #### Let's pass some tests!
 Tests are a great way to make sure you code works the way you planned it would, and to make sure you don't break something in the future. We will be using them to test our understanding of the lesson.
 
@@ -27,7 +28,6 @@ Tests are a great way to make sure you code works the way you planned it would, 
 8. Change the `return false;` statement to `return true;`
 9. Run `mocha` again and watch the test pass!
 
-### Longstart
 #### Lesson One Tests
 1. Navigate into the LessonOne directory
 2. Run `mocha` and watch the tests fail :(

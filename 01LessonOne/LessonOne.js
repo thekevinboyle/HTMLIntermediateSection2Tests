@@ -27,4 +27,10 @@ module.exports = function() {
     // and should return true if the first argument is equal to the second argument
 
   }
+
+  this.notEqualTo = function (a, b) {
+    // should return true if the first argument is not equal to the second argument
+    // and should return false if the first argument is equal to the second argument
+
+  }
 }

@@ -20,14 +20,20 @@ Tests are a great way to make sure you code works the way you planned it would, 
 
 1. Our test repository is located at https://github.com/AustinCodingAcademy/HTMLIntermediateSection2Tests.
 2. Click the 'Fork' button (choose your account if prompted).
-3. Once forked, repeat steps 3 - 7 above.
-4. Type `sudo npm install -g mocha` in your terminal. Enter your password if prompted.
-5. Navigate into 00LessonZero in your terminal (`cd 00LessonZero`)
-6. Run `mocha`
-7. Watch the test fail :(
-7. Open `LessonZero.js`.
-8. Change the `return false;` statement to `return true;`
-9. Run `mocha` again and watch the test pass!
+3. Copy the HTTPS clone URL
+4. In your terminal, navigate (using `cd`) into a directory where you want to start keeping your repositories.
+5. Clone your new repository by typing `git clone <forked clone URL>` (without carets "<>", ditto for future examples)
+![Forking a repository](https://docs.google.com/drawings/d/1tYsLHaLo8JRdp0xC1EZrAo0o9Wvv4S5AD937cokVOBk/pub?w=960&h=720)
+6. Add the base repository as an upstream `git remote add upstream git@github.com:AustinCodingAcademy/HTMLIntermediateSection2Tests.git`
+
+6. Navigate into the directory `cd HTMLIntermediateSection2Tests`
+7. Type `sudo npm install -g mocha` in your terminal. Enter your password if prompted.
+8. Navigate into 00LessonZero in your terminal (`cd 00LessonZero/`)
+9. Run `mocha`
+10. Watch the test fail :(
+11. Open `LessonZero.js`.
+12. Change the `return false;` statement to `return true;`
+13. Run `mocha` again and watch the test pass!
 
 #### Tips
 1. Below each comment with the specs, try to do what it is asking. Be sure to always `return` your answer.
@@ -47,3 +53,5 @@ git push origin master
 .3. Click "Create Pull Request"
 
 .4. Everytime you make a change and push to GitHub, this PR will automatically update. No need to do it more than once.
+
+![Contributing workflow](https://docs.google.com/drawings/d/1WeKQxOHgPKfwjy_eKtlJO62Fu4XTCWFeqkAh1oIqICM/pub?w=960&h=720)

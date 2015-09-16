@@ -25,6 +25,7 @@ module.exports = function() {
   this.equalTo = function (a, b) {
     // should return true if the first argument is equal to the second argument
     // and should return true if the first argument is equal to the second argument
+    return a === b;
 
   }
 

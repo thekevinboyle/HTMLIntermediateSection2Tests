@@ -36,22 +36,22 @@ describe('LessonOne', function() {
 
   describe('#equalTo()', function () {
     it('should return true if the first argument is equal to the second argument', function () {
-      assert.deepEqual(lessonOne.deepEqualTo(6, 6), true);
+      assert.deepEqual(lessonOne.equalTo(6, 6), true);
     });
     it('should return false if the first argument is not equal to the second argument', function () {
-      assert.deepEqual(lessonOne.deepEqualTo(6, 7), false);
+      assert.deepEqual(lessonOne.equalTo(6, 7), false);
     });
     it('should return false if not using ===', function () {
-      assert.deepEqual(lessonOne.deepEqualTo(6, '6'), false);
+      assert.deepEqual(lessonOne.equalTo(6, '6'), false);
     });
   });
 
   describe('#notEqualTo()', function () {
     it('should return false if the first argument is equal to the second argument', function () {
-      assert.deepEqual(lessonOne.notEqualTo(6, 6), false);
+      assert.deepEqual(lessonOne.equalTo(6, 6), false);
     });
     it('should return true if the first argument is not equal to the second argument', function () {
-      assert.deepEqual(lessonOne.notEqualTo(6, 7), true);
+      assert.deepEqual(lessonOne.equalTo(6, 7), true);
     });
     it('should return true if not using ===', function () {
       assert.deepEqual(lessonOne.notEqualTo(6, '6'), true);

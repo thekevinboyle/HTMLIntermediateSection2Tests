@@ -18,5 +18,12 @@ describe('LessonTwo', function() {
       assert.equal(lessonTwo.whichSpecies('stitch'), false);
     });
   });
-
+  describe('#isEven()', function () {
+    it('should return true is number is even (divisible by 2)', function () {
+      assert.equal(lessonTwo.isEven(4), true);
+    });
+    it('should return false when number is not even', function () {
+      assert.equal(lessonTwo.isEven(5), false);
+    });
+  });
 });

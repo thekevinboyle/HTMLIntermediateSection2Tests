@@ -6,7 +6,7 @@ describe('LessonZero', function() {
 
   describe('#returnTrue()', function () {
     it('should return true', function () {
-      assert.deepEqual(lessonZero.returnTrue(), true);
+      assert.equal(lessonZero.returnTrue(), true);
     });
   });
 });

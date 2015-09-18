@@ -48,10 +48,10 @@ describe('LessonOne', function() {
 
   describe('#notEqualTo()', function () {
     it('should return false if the first argument is equal to the second argument', function () {
-      assert.equal(lessonOne.equalTo(6, 6), false);
+      assert.equal(lessonOne.notEqualTo(6, 6), false);
     });
     it('should return true if the first argument is not equal to the second argument', function () {
-      assert.equal(lessonOne.equalTo(6, 7), true);
+      assert.equal(lessonOne.notEqualTo(6, 7), true);
     });
     it('should return true if not using ===', function () {
       assert.equal(lessonOne.notEqualTo(6, '6'), true);

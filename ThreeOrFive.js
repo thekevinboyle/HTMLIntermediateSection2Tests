@@ -5,9 +5,9 @@ var prompt = require('prompt');
 prompt.start()
 
 prompt.get(['number'], function (error, result) {
-  var num = parseInt(result['number']);  // if number is divisible by 3 and 5
+  var num = parseInt(result['number']);
 
-  if (num % 3 === 0 && 5 === 0) {
+  if (num % 3 === 0 && 5 === 0) { // if number is divisible by 3 & 5
     console.log(num + ' is divisible by 3 and 5');
   }
   else

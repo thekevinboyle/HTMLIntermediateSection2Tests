@@ -14,7 +14,7 @@ prompt.get(['number'], function (error, result) {
       console.log(num + ' is divisible by 3');
     } else {
       if (num % 5 === 0) { // if number is divisible by 5
-        console.log( + ' is divisible by 5');
+        console.log(num + ' is divisible by 5');
       } else {
         console.log(num);
       }

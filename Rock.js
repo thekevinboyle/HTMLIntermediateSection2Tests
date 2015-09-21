@@ -14,5 +14,5 @@
 // If hand1 is rock
   // if hand2 is scissors, then "hand1 wins"
   // Otherwise hand2 wins (which is to say that hand2 is paper and/or isn't a tie)
-
-console.log('fuck yeah');
+// runnin shit
+console.log('this this this');

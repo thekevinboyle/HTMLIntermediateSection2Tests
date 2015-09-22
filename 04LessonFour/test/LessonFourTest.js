@@ -40,9 +40,9 @@ describe('LessonFour', function() {
 
   describe('#returnValueByKey', function () {
     it('given an object and a key, should return the value assigned to the key', function () {
-      assert.deepEqual(lessonFour.returnValueByKey({ 'a': 1, 'b': 2, 'c': 3}, 'a'), 1);
-      assert.deepEqual(lessonFour.returnValueByKey({ 'a': 1, 'b': 2, 'c': 3}, 'b'), 2);
-      assert.deepEqual(lessonFour.returnValueByKey({ 'a': 1, 'b': 2, 'c': 3}, 'c'), 3);
+      assert.equal(lessonFour.returnValueByKey({ 'a': 1, 'b': 2, 'c': 3}, 'a'), 1);
+      assert.equal(lessonFour.returnValueByKey({ 'a': 1, 'b': 2, 'c': 3}, 'b'), 2);
+      assert.equal(lessonFour.returnValueByKey({ 'a': 1, 'b': 2, 'c': 3}, 'c'), 3);
     });
   });
 });

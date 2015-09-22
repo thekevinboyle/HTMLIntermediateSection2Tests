@@ -34,14 +34,14 @@ describe('LessonThree', function() {
         [1, 2, 4, 4, 5],
         [1, 2, 5, 4, 5]
       ];
-      assert.deepEqual(lessonThree.returnCenterItem(arr), 3);
+      assert.equal(lessonThree.returnCenterItem(arr), 3);
     });
   });
 
   describe('#arrayJoin()', function () {
     it('should return a string of the joined array items, separated by a space', function () {
-      assert.deepEqual(lessonThree.arrayJoin(['a', 'b', 'c']), 'a b c');
-      assert.deepEqual(lessonThree.arrayJoin(['e', 'f', 'g']), 'e f g');
+      assert.equal(lessonThree.arrayJoin(['a', 'b', 'c']), 'a b c');
+      assert.equal(lessonThree.arrayJoin(['e', 'f', 'g']), 'e f g');
     });
   });
 

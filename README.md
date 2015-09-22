@@ -54,4 +54,8 @@ git push origin master
 
 .4. Everytime you make a change and push to GitHub, this PR will automatically update. No need to do it more than once.
 
+#### Get latest test updates
+1. To get the latest test updates, be sure to have a "clean working directory" by committing or removing all of your changes. You check for a "clean working environment" by running `git status` and makeing sure no files show up.
+2. Run `git pull upstream master`
+
 ![Contributing workflow](https://docs.google.com/drawings/d/1WeKQxOHgPKfwjy_eKtlJO62Fu4XTCWFeqkAh1oIqICM/pub?w=960&h=720)

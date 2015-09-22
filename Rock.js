@@ -1,6 +1,7 @@
 'use strict';
 
-var theGame = function (hand1, hand2) {
+var compareHands = function (hand1, hand2) {
+
   if (hand1 === hand2) { // Its a tie
     return "Tie";
   }
@@ -25,11 +26,14 @@ var theGame = function (hand1, hand2) {
     }
     return 'Player 2 wins'; // hand1 === rock
   }
-    return;
-
 }
 
-
+function acceptableInput(hand) {
+  if (hand === 'rock' || hand === 'paper' || hand === 'scissors') {
+    return true;
+  }
+  return false;
+}
 
 var prompt = require('prompt');
 
@@ -37,10 +41,13 @@ prompt.start()
 
 prompt.get(['hand1', 'hand2'], function (error, result) {
 
-  console.log('First Hand: ' + result.hand1);
-  console.log('Second Hand: ' + result.hand2);
+  var lowerHand1 = result['hand1'].toLowerCase();
+  var lowerHand2 = result['hand2'].toLowerCase();
 
-  console.log(theGame(result.hand1, result.hand2));
-
+  if (acceptableInput(lowerHand1) && acceptableInput(lowerHand2)) {
+    console.log(compareHands(lowerHand1, lowerHand2));
+  } else {
+    console.log('Hey dummy! Its either "rock", "paper", or "scissors!"');
+  }
 });
 

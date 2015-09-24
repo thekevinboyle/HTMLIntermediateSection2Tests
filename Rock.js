@@ -1,3 +1,4 @@
+/* jshint node: true */
 'use strict';
 
 var compareHands = function (hand1, hand2) {
@@ -26,7 +27,7 @@ var compareHands = function (hand1, hand2) {
     }
     return 'Player 2 wins'; // hand1 === rock
   }
-}
+};
 
 function acceptableInput(hand) {
   if (hand === 'rock' || hand === 'paper' || hand === 'scissors') {
@@ -37,12 +38,12 @@ function acceptableInput(hand) {
 
 var prompt = require('prompt');
 
-prompt.start()
+prompt.start();
 
 prompt.get(['hand1', 'hand2'], function (error, result) {
 
-  var lowerHand1 = result['hand1'].toLowerCase();
-  var lowerHand2 = result['hand2'].toLowerCase();
+  var lowerHand1 = result.hand1.toLowerCase();
+  var lowerHand2 = result.hand2.toLowerCase();
 
   if (acceptableInput(lowerHand1) && acceptableInput(lowerHand2)) {
     console.log(compareHands(lowerHand1, lowerHand2));
@@ -50,4 +51,3 @@ prompt.get(['hand1', 'hand2'], function (error, result) {
     console.log('Hey dummy! Its either "rock", "paper", or "scissors!"');
   }
 });
-

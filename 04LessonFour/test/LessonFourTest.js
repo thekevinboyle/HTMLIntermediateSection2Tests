@@ -34,7 +34,7 @@ describe('LessonFour', function() {
 
   describe('#createObject', function () {
     it('should return an object with keys "first", "second", "third" mapped to values 1, 2, 3', function () {
-      assert.deepEqual(lessonFour.createObject(), { 'a': 1, 'b': 2, 'c': 3 });
+      assert.deepEqual(lessonFour.createObject(), { first: 1, second: 2, third: 3 });
     });
   });
 

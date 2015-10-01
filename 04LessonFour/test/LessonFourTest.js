@@ -45,4 +45,11 @@ describe('LessonFour', function() {
       assert.equal(lessonFour.returnValueByKey({ 'a': 1, 'b': 2, 'c': 3}, 'c'), 3);
     });
   });
+
+  describe('#assignKeyValue', function () {
+    it('given an object, key, and value, add the key/value pair to the object. return the object', function () {
+      assert.deepEqual(lessonFour.assignKeyValue({}, 'a', 1), { a: 1 });
+      assert.deepEqual(lessonFour.assignKeyValue({}, 'b', 2), { b: 2 });
+    });
+  });
 });

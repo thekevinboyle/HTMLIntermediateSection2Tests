@@ -34,7 +34,7 @@ describe('LessonFour', function() {
 
   describe('#createObject', function () {
     it('should return an object with keys "first", "second", "third" mapped to values 1, 2, 3', function () {
-      assert.deepEqual(lessonFour.createObject(), { 'a': 1, 'b': 2, 'c': 3 });
+      assert.deepEqual(lessonFour.createObject(), { first: 1, second: 2, third: 3 });
     });
   });
 
@@ -43,6 +43,13 @@ describe('LessonFour', function() {
       assert.equal(lessonFour.returnValueByKey({ 'a': 1, 'b': 2, 'c': 3}, 'a'), 1);
       assert.equal(lessonFour.returnValueByKey({ 'a': 1, 'b': 2, 'c': 3}, 'b'), 2);
       assert.equal(lessonFour.returnValueByKey({ 'a': 1, 'b': 2, 'c': 3}, 'c'), 3);
+    });
+  });
+
+  describe('#assignKeyValue', function () {
+    it('given an object, key, and value, should add the key/value pair to the object, then return the object', function () {
+      assert.deepEqual(lessonFour.assignKeyValue({ 'a': 1}, 'a', 2), { 'a': 2});
+      assert.deepEqual(lessonFour.assignKeyValue({ 'a': 1}, 'b', 2), { 'a': 1, 'b': 2});
     });
   });
 });

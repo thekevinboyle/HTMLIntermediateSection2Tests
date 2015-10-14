@@ -2,27 +2,105 @@
 /* jslint node: true */
 'use strict';
 
+
+// Step 1.  Build the board and make it look pretty
+
+var solution = 'ghab'; // [g,h,a,b]
+var guess = 'abcd'; // [a,b,c,b]
+var numTry = 0;
+
+var board = [
+  [' ', ' ', ' ', ' '],
+  [' ', ' ', ' ', ' '],
+  [' ', ' ', ' ', ' '],
+  [' ', ' ', ' ', ' '],
+  [' ', ' ', ' ', ' '],
+  [' ', ' ', ' ', ' '],
+  [' ', ' ', ' ', ' '],
+  [' ', ' ', ' ', ' '],
+  [' ', ' ', ' ', ' '],
+  [' ', ' ', ' ', ' ']
+];
+
+function printBoard() {
+  for(var i = 0; i < board.length; i++) {
+    console.log(board[i].join(' '));
+  }
+}
+
+// Step 2. Prompt the user
+
 var prompt = require('prompt');
 prompt.start();
+var colors = require('colors/safe');
 
 function getPrompt() {
-  prompt.get(['start', 'finish'], function (error, result) {
+  printBoard();
+  prompt.get(['guess'], function (error, result) {
 
+    var guess = result['guess'];
+    if (checkSolution(guess) === true) {
+      return false;
+    }
+    console.log('Guess: ' + guess);
+
+    var hint = generateHints(solution, guess);
+    // if (checkSolution(result.guess)) { return; }
+    insertGuess(guess, hint);
+    if (board.length === 10) {
+      return false;
+    }
+    getPrompt();
   });
 }
 
-// getPrompt();
-function printBoard() {
-  console.log(board[0]);
-  console.log(board[1]);
-  console.log(board[2]);
-  console.log(board[3]);
+// Generate a random solution
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
-// hard guess and solution
-//
-var solution = 'ghab'; // [g,h,a,b]
-var guess = 'abcb'; // [a,b,c,b]
+var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+
+function generateSolution () {
+
+  for(var i = 0; i < 4; i++) {
+    var randomIndex = getRandomInt(0, letters.length);
+    solution = solution + letters[randomIndex];
+  }
+}
+
+
+// Check for a win!
+
+function checkSolution (guess) {
+  if( guess === solution ) {
+    console.log (guess + ' is the solution');
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Capture the number of guesses
+
+function insertCode (guess, hints) {
+  board.push(guess + ' ' + hints);
+}
+
+
+
+function insertGuess(guess) {
+  var splitguess = guess.split('');
+  var splitGuess = guess.split('');
+
+  for(var x = 0; x < board[numTry].length; x++) {
+    board[numTry][x] = splitGuess[x];
+    console.log(splitguess[x]);
+  }
+  numTry++;
+}
+
 
 function generateHints(solution, guess) {
   var solutionArray = solution.split(' ');
@@ -53,6 +131,9 @@ function generateHints(solution, guess) {
       correctLetters++;
       solutionArray[targetIndex] = null;
     }
-    return correctLetters + " - " + correctLettersLocations;
+    return colors.red(correctLetters) + " - " + correctLettersLocations;
   }
 }
+
+generateSolution();
+getPrompt();

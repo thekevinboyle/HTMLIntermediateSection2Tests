@@ -13,6 +13,6 @@ for (var i = 0; i < 1000; i++) {
     sum += i;
   }
 }
-console.log('Answer: %d', sum);
+console.log('Answer: ', sum);
 
 
